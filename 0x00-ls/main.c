@@ -19,7 +19,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 	}
 	else if (argc < 3)
 	{
-		strcpy(buffer, argv[1]);
+		_strcpy(buffer, argv[1]);
 		return (ls_dir(buffer, 0));
 	}
 	else
@@ -42,7 +42,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 			{
 				continue;
 			}
-			strcpy(multybuff, argv[j]);
+			_strcpy(multybuff, argv[j]);
 			status += ls_dir(multybuff, 1);
 		}
 
@@ -63,7 +63,7 @@ int ls_dir(char *buff, int bool)
 	struct dirent *read;
 	char buffer[80];
 
-	strcpy(buffer, buff);
+	_strcpy(buffer, buff);
 
 	dir = opendir(buffer);
 
@@ -80,9 +80,9 @@ int ls_dir(char *buff, int bool)
 	{
 		char pathname[] = "./";
 
-		strcat(pathname, buffer);
-		strcat(pathname, "/");
-		strcat(pathname, read->d_name);
+		_strcat(pathname, buffer);
+		_strcat(pathname, "/");
+		_strcat(pathname, read->d_name);
 
 		if (read->d_name[0] == '.')
 			continue;
