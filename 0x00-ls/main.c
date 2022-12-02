@@ -11,6 +11,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 	DIR *dir;
 	char buffer[80];
 	int status;
+	int i, j;
 
 	if (argc < 2)
 	{
@@ -25,7 +26,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 	{
 		char multybuff[80];
 
-		for (int i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
 			dir = opendir(argv[i]);
 			if (!dir)
@@ -34,7 +35,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 				continue;
 			}
 		}
-		for (int j = 1; j < argc; j++)
+		for (j = 1; j < argc; j++)
 		{
 			dir = opendir(argv[j]);
 			if (!dir)
