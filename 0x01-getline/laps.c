@@ -67,6 +67,8 @@ void check_list(car_race **head, int *id, size_t size)
 
 void insert(car_race **head, car_race *newnode)
 {
+	car_race *current;
+
 	if (*head == NULL || (*head)->id >= newnode->id)
 	{
 		newnode->next = *head;
@@ -74,7 +76,7 @@ void insert(car_race **head, car_race *newnode)
 		return;
 	}
 
-	car_race *current = *head;
+	current = *head;
 
 	while (current->next != NULL && current->next->id < newnode->id)
 		current = current->next;
