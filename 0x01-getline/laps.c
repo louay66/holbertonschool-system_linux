@@ -18,7 +18,7 @@ void race_state(int *id, size_t size)
 		check_list(&head, id, size);
 		print(&head);
 	}
-	else if (size == 0)
+	else
 	{
 		while (node)
 		{
