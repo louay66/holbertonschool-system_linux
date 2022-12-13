@@ -13,7 +13,7 @@ void race_state(int *id, size_t size)
 	car_race *node;
 
 	node = head;
-	if (size)
+	if (size != 0)
 	{
 		check_list(&head, id, size);
 		print(&head);
@@ -37,11 +37,12 @@ void race_state(int *id, size_t size)
  */
 void check_list(car_race **head, int *id, size_t size)
 {
-	car_race *node = *head;
+	car_race *node;
 	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
+		node = *head;
 		while (node)
 		{
 			if (id[i] == node->id)
