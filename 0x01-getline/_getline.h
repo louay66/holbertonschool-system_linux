@@ -16,10 +16,10 @@
  */
 typedef struct list_s
 {
-   int fd;
-   char *buffer;
-   int data;
-   struct list_s *next;
+	int fd;
+	char *buffer;
+	int data;
+	struct list_s *next;
 } list_t;
 
 char *_getline(const int fd);
