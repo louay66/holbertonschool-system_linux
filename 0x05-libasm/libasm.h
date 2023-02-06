@@ -1,7 +1,6 @@
 #ifndef LIBASM_H
 #define LIBASM_H
 
-
 size_t asm_strlen(const char *str);
 int asm_strcmp(const char *s1, const char *s2);
 int asm_strncmp(const char *s1, const char *s2, size_t n);
@@ -18,4 +17,4 @@ char *asm_strpbrk(const char *s, const char *accept);
 size_t asm_puti(int n);
 size_t asm_puti_base(int n, const char *base);
 
-#endif 
+#endif
