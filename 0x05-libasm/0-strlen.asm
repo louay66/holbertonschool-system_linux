@@ -1,7 +1,5 @@
 BITS 64
-
 global asm_strlen
-
 section .text
 asm_strlen:
    push rbp; puch base pointer to the end of the section after return value of procedure(function)
