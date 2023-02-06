@@ -9,6 +9,8 @@ section .text
          xor rcx, rcx
          xor rax, rax
    loop_in_bytes_of_sour_and_dest:
+            cmp rdx, 0
+            je return
             cmp rcx, rdx
             je compar
             mov al, [rdi + rcx]
