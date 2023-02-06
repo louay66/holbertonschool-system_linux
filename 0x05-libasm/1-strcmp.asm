@@ -4,9 +4,9 @@ global asm_strcmp
 
 section .text
    asm_strcmp:
-         push rbp 
-         mov rbp, rsp 
-         xor rcx, rcx 
+         push rbp
+         mov rbp, rsp
+         xor rcx, rcx
    loop_in_bytes_of_sour_and_dest:
             mov al, [rdi + rcx]
             mov bl, [rsi + rcx]
@@ -22,7 +22,7 @@ section .text
       cmp al , bl
       je equal
       jg greater
-      jl less 
+      jl less
    equal:
       mov rax , 0
       jmp return
@@ -31,8 +31,8 @@ section .text
       jmp return
    less:
       mov rax , -1
-      jmp return      
+      jmp return
    return:
       mov rsp , rbp
-      pop rbp  
-      ret 
+      pop rbp
+      ret
