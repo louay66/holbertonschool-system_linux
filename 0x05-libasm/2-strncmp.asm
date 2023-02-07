@@ -29,15 +29,15 @@ section .text
       jg greater
       jl less
    equal:
-      mov rax , 0
+      mov rax , 0x0
       jmp return
    greater:
-      sub al, bl
+      mov rax , 0x1
       jmp return
    less:
       sub bl, al
       mov al , bl
-      neg rax
+      mov rax , -0x1
       jmp return
    return:
       mov rsp , rbp
