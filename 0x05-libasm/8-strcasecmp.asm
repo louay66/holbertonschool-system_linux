@@ -14,6 +14,12 @@ section .text
    loop_in_bytes_of_sour_and_dest:
             mov dl, [rdi + rcx]
             mov bl, [rsi + rcx]
+            mov r8b, [rdi]
+            mov r9b, [rsi]
+            cmp r8b, 0
+            je result_zero
+            cmp r9b, 0
+            je result_zero
             cmp dl, 65
             jl recheck
             cmp dl, 90
@@ -34,6 +40,10 @@ section .text
       je return
       inc rcx
       jmp loop_in_bytes_of_sour_and_dest
+   result_zero:
+      mov eax, edx
+      sub eax, ebx
+      jmp return
 
    return:
    mov rsp , rbp
