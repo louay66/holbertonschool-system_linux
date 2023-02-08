@@ -14,10 +14,6 @@ section .text
    loop_in_bytes_of_sour_and_dest:
          mov r9b, [rdi + rcx]
          mov r11b, [rsi + rcx]
-         cmp r9b, 0
-         je NULL_bytes
-         cmp r11b, 0
-         je NULL_bytes
          cmp r9b, 65
          jl recheck
          cmp r9b, 90
@@ -41,10 +37,6 @@ section .text
          dec rdx
          inc rcx
          jmp loop_in_bytes_of_sour_and_dest
-   NULL_bytes:
-         mov eax, r9d
-         sub eax, r11d
-         jmp return
 
    return:
          mov rsp , rbp
