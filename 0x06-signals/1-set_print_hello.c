@@ -11,7 +11,7 @@
 
 void print_hello(int n __attribute__((unused)))
 {
-	printf("Hello :)\n");
+	write(STDOUT_FILENO, "Hello :)\n", 9);
 }
 
 /**
