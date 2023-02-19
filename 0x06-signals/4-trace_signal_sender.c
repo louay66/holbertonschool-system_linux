@@ -13,6 +13,7 @@
 void handler(int sig unused, siginfo_t *info, void *ucontext unused)
 {
 	printf("SIGQUIT sent by %i\n", info->si_pid);
+	fflush(stdout);
 }
 
 /**

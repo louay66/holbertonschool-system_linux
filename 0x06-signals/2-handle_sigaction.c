@@ -11,6 +11,7 @@
 void handler(int num)
 {
 	printf("Gotcha! [%d]\n", num);
+	fflush(stdout);
 }
 
 /**
