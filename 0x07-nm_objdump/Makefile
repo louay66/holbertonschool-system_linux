@@ -3,5 +3,5 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 hnm: 0-hnm.c
 	$(CC) $(CFLAGS) 0-hnm.c -o hnm
-hobjdump: 1-nm.c
-	$(CC) $(CFLAGS) 1-nm.c -o hobjdump
+hobjdump: 1-objdump.c
+	$(CC) $(CFLAGS) 1-objdump.c -o hobjdump
