@@ -10,7 +10,7 @@
  *
  * Return: EXIT_SUCCESS if successful, EXIT_FAILURE if an error occurs
  */
-int main(int argc, char **argv, char **env)
+int main(int  __attribute__((unused)) argc, char **argv, char **env)
 {
 	char *comm[] = {"./hnm", "-p", "", NULL};
 
