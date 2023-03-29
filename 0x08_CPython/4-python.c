@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#
-include<Python.h>
+#include <Python.h>
 
 /**
  * print_python_string - prints a Python string
