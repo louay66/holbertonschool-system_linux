@@ -54,7 +54,8 @@ void print_python_bytes(PyObject *p)
 	printed_bytes = (size + 1 >= 10) ? 10 : size + 1;
 	printf("  first %li bytes:", printed_bytes);
 	for (i = 0; i < printed_bytes; i++)
-		printf(" %02hhx", (unsigned char)(array_as_string[i]));
+		printf("%02hhx%c",
+				((PyBytesObject *)p)->ob_sval[i], i + 1 == sz ? '\n' : ' ');
 	putchar('\n');
 	fflush(stdout);
 }
