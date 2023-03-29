@@ -55,7 +55,7 @@ void print_python_bytes(PyObject *p)
 	printf("  first %li bytes:", printed_bytes);
 	for (i = 0; i < printed_bytes; i++)
 		printf("%02hhx%c",
-				((PyBytesObject *)p)->ob_sval[i], i + 1 == sz ? '\n' : ' ');
+				((PyBytesObject *)p)->ob_sval[i], i + 1 == size ? '\n' : ' ');
 	putchar('\n');
 	fflush(stdout);
 }
