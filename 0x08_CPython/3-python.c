@@ -20,7 +20,7 @@ void print_python_float(PyObject *p)
 		return;
 	}
 	str = PyOS_double_to_string(((PyFloatObject *)p)->ob_fval,
-			'g', 16, 0, NULL);
+										 'g', 16, 0, NULL);
 	printf("  value: %s%s\n", str, strchr(str, '.') ? "" : ".0");
 	fflush(stdout);
 }
@@ -54,8 +54,7 @@ void print_python_bytes(PyObject *p)
 	printed_bytes = (size + 1 >= 10) ? 10 : size + 1;
 	printf("  first %li bytes:", printed_bytes);
 	for (i = 0; i < printed_bytes; i++)
-		printf("%02hhx%c",
-				((PyBytesObject *)p)->ob_sval[i], i + 1 == size ? '\n' : ' ');
+		printf(" %02hhx", array_as_string[i]);
 	putchar('\n');
 	fflush(stdout);
 }
