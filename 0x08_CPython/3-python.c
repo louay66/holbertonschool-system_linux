@@ -23,6 +23,7 @@ void print_python_float(PyObject *p)
 	str = PyOS_double_to_string(((PyFloatObject *)p)->ob_fval,
 			'g', 16, 0, NULL);
 	printf("  value: %s%s\n", str, strchr(str, '.') ? "" : ".0");
+	fflush(stdout);
 }
 
 /**
@@ -55,6 +56,7 @@ void print_python_bytes(PyObject *p)
 	for (i = 0; i < printed_bytes; i++)
 		printf(" %02x", (unsigned char)(array_as_string[i]));
 	putchar('\n');
+	fflush(stdout);
 }
 /**
  * print_python_list - prints some basic info about a Python list object
@@ -83,4 +85,5 @@ void print_python_list(PyObject *p)
 		else if (PyFloat_Check(item))
 			print_python_float(item);
 	}
+	fflush(stdout);
 }
