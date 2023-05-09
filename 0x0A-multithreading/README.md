@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-- What is a thread
+- What is a threads
 - What are the differences between a thread and a process
 - What is the difference between Concurrency and Parallelism
 - How to create a thread
