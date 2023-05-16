@@ -6,9 +6,9 @@
  * @list: the list of prime factors
  * Return: Void
  */
-void factors(unsigned int num, list_t *list)
+void factors(unsigned long num, list_t *list)
 {
-	unsigned int i, *prime = NULL;
+	unsigned long i, *prime = NULL;
 
 	while (num % 2 == 0)
 	{
@@ -43,7 +43,7 @@ void factors(unsigned int num, list_t *list)
  */
 list_t *prime_factors(char const *s)
 {
-	unsigned int num = 0;
+	unsigned long num = 0;
 	int i = 0;
 	list_t *list = NULL;
 
